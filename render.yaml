@@ -3,6 +3,6 @@ services:
     name: unitech-erp
     env: node
     rootDir: backend
-    buildCommand: npm --prefix ../unitech-frontend install && npm --prefix ../unitech-frontend run build
+    buildCommand: npm install && npm --prefix ../unitech-frontend install && npm --prefix ../unitech-frontend run build
     startCommand: npm start
     autoDeploy: true
