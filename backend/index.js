@@ -1,4 +1,8 @@
-require('dotenv').config();
+try {
+  require('dotenv').config();
+} catch {
+  // Render injecte deja les variables d'environnement en production.
+}
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');

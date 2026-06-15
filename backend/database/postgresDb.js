@@ -1,5 +1,9 @@
 const path = require('node:path');
-require('dotenv').config({ path: path.resolve(__dirname, '..', '.env') });
+try {
+  require('dotenv').config({ path: path.resolve(__dirname, '..', '.env') });
+} catch {
+  // En production, les variables sont fournies par l'environnement.
+}
 const { Pool } = require('pg');
 
 function safeDecodeUriComponent(value) {

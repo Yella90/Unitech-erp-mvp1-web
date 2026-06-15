@@ -1,4 +1,8 @@
-require('dotenv').config();
+try {
+  require('dotenv').config();
+} catch {
+  // Permet d'executer le script meme si dotenv n'est pas installe.
+}
 
 const fs = require('node:fs');
 const path = require('node:path');
